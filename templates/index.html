@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksis</title>
+    {{ pagedown.include_pagedown() }}
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/normalize.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="navegacion">
+        <div class="navegacion-logo">
+            <h1>Mark<span>xis</span><em>Markdown Editor Project</em></h1>
+        </div>
+        <nav class="navegacion-link">
+            <a href="#">PREVIEW</a>
+            <a href="#">DOWNLOAD PDF</a>
+            <a href="#">SAVE</a>
+            <a href="#">OPEN</a>
+            <a href="#">SETTINGS</a>
+        </nav>
+    </div>
+    <div class="widgets">
+
+    </div>
+
+
+    <div class="ventanas">
+        <div class="ventana ventana_editor">
+            {{ form.pagedown(only_input=True) }}
+        </div>
+        <div class="ventana ventana_visor">
+            {{ form.pagedown(only_preview=True) }}
+        </div>
+    </div>
+
+    <footer>
+
+        <script type="text/javascript" src="../static/js/scripts.js"></script>
+
+    </footer>
+
+</body>
+
+
+</html>
